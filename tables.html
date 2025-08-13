@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>Tables</title>
+		<style>
+			body {
+				margin: 0;
+				font-family: Inter, Arial;
+				background: #eef2f7;
+				color: #111;
+			}
+			.wrap {
+				max-width: 900px;
+				margin: 28px auto;
+				padding: 18px;
+			}
+			.card {
+				background: #fff;
+				padding: 16px;
+				border-radius: 10px;
+			}
+			table {
+				width: 100%;
+				border-collapse: collapse;
+				margin-top: 12px;
+			}
+			th,
+			td {
+				border: 1px solid #cfd8e3;
+				padding: 10px;
+				text-align: left;
+			}
+			thead th {
+				background: #2f80ed;
+				color: #fff;
+			}
+			tr:nth-child(even) {
+				background: #fbfdff;
+			}
+			caption {
+				text-align: left;
+				font-weight: 700;
+				margin-bottom: 6px;
+			}
+			@media (max-width: 600px) {
+				table,
+				thead,
+				tbody,
+				th,
+				td,
+				tr {
+					display: block;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<div
+				style="
+					overflow-x: auto;
+					-webkit-overflow-scrolling: touch;
+					margin-bottom: 12px;
+				"
+			>
+				<table
+					role="presentation"
+					style="border-collapse: collapse; min-width: 600px"
+				>
+					<tr>
+						<td>
+							<a
+								href="index.html"
+								style="
+									display: inline-block;
+									padding: 8px 12px;
+									border-radius: 6px;
+									text-decoration: none;
+									color: #fff;
+									font-weight: 700;
+									background: #00000044;
+								"
+								>Home</a
+							>
+						</td>
+						<td>
+							<a
+								href="about.html"
+								style="
+									display: inline-block;
+									padding: 8px 12px;
+									border-radius: 6px;
+									text-decoration: none;
+									color: #fff;
+									font-weight: 700;
+									background: #00000044;
+								"
+								>About Us</a
+							>
+						</td>
+						<td>
+							<a
+								href="education.html"
+								style="
+									display: inline-block;
+									padding: 8px 12px;
+									border-radius: 6px;
+									text-decoration: none;
+									color: #fff;
+									font-weight: 700;
+									background: #00000044;
+								"
+								>Education</a
+							>
+						</td>
+						<td>
+							<a
+								href="skills.html"
+								style="
+									display: inline-block;
+									padding: 8px 12px;
+									border-radius: 6px;
+									text-decoration: none;
+									color: #fff;
+									font-weight: 700;
+									background: #00000044;
+								"
+								>Skills</a
+							>
+						</td>
+						<td>
+							<a
+								href="lists.html"
+								style="
+									display: inline-block;
+									padding: 8px 12px;
+									border-radius: 6px;
+									text-decoration: none;
+									color: #fff;
+									font-weight: 700;
+									background: #00000044;
+								"
+								>Lists</a
+							>
+						</td>
+						<td>
+							<a
+								href="formats.html"
+								style="
+									display: inline-block;
+									padding: 8px 12px;
+									border-radius: 6px;
+									text-decoration: none;
+									color: #fff;
+									font-weight: 700;
+									background: #00000044;
+								"
+								>Formatting</a
+							>
+						</td>
+						<td>
+							<a
+								href="tables.html"
+								style="
+									display: inline-block;
+									padding: 8px 12px;
+									border-radius: 6px;
+									text-decoration: none;
+									color: #fff;
+									font-weight: 700;
+									background: #ffffff22;
+								"
+								>Tables</a
+							>
+						</td>
+						<td>
+							<a
+								href="media.html"
+								style="
+									display: inline-block;
+									padding: 8px 12px;
+									border-radius: 6px;
+									text-decoration: none;
+									color: #fff;
+									font-weight: 700;
+									background: #00000044;
+								"
+								>Media</a
+							>
+						</td>
+						<td>
+							<a
+								href="review.html"
+								style="
+									display: inline-block;
+									padding: 8px 12px;
+									border-radius: 6px;
+									text-decoration: none;
+									color: #fff;
+									font-weight: 700;
+									background: #00000044;
+								"
+								>Review</a
+							>
+						</td>
+						<td>
+							<a
+								href="login.html"
+								style="
+									display: inline-block;
+									padding: 8px 12px;
+									border-radius: 6px;
+									text-decoration: none;
+									color: #fff;
+									font-weight: 700;
+									background: #00000044;
+								"
+								>Login</a
+							>
+						</td>
+						<td>
+							<a
+								href="signup.html"
+								style="
+									display: inline-block;
+									padding: 8px 12px;
+									border-radius: 6px;
+									text-decoration: none;
+									color: #fff;
+									font-weight: 700;
+									background: #00000044;
+								"
+								>Sign Up</a
+							>
+						</td>
+						<td>
+							<a
+								href="contact.html"
+								style="
+									display: inline-block;
+									padding: 8px 12px;
+									border-radius: 6px;
+									text-decoration: none;
+									color: #fff;
+									font-weight: 700;
+									background: #00000044;
+								"
+								>Contact</a
+							>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="card">
+				<h2 style="margin-top: 0">Tables with colspan & rowspan</h2>
+				<table>
+					<caption>
+						Contact records
+					</caption>
+					<thead>
+						<tr>
+							<th colspan="2">Name</th>
+							<th>Age</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Jill</td>
+							<td>Smith</td>
+							<td>43</td>
+						</tr>
+						<tr>
+							<th rowspan="2">Phone</th>
+							<td>555-1234</td>
+							<td>2022</td>
+						</tr>
+						<tr>
+							<td>555-8745</td>
+							<td>2023</td>
+						</tr>
+					</tbody>
+				</table>
+				<p style="margin-top: 12px; color: #666">
+					Note: table is responsive; on very small screens each row
+					will stack for readability.
+				</p>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>Media</title>
+		<style>
+			body {
+				margin: 0;
+				font-family: Inter, Arial;
+				background: #fff;
+				color: #111;
+			}
+			.wrap {
+				max-width: 900px;
+				margin: 28px auto;
+				padding: 18px;
+			}
+			.card {
+				background: #f9fafb;
+				padding: 16px;
+				border-radius: 10px;
+			}
+			.media-row {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 12px;
+			}
+			video,
+			iframe {
+				max-width: 100%;
+				border-radius: 8px;
+			}
+			canvas {
+				border: 1px solid #ccc;
+				width: 100%;
+				height: 120px;
+			}
+			@media (max-width: 700px) {
+				.media-row {
+					grid-template-columns: 1fr;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<div
+				style="
+					overflow-x: auto;
+					-webkit-overflow-scrolling: touch;
+					margin-bottom: 12px;
+				"
+			>
+				<table
+					role="presentation"
+					style="border-collapse: collapse; min-width: 600px"
+				>
+					<tr>
+						<td>
+							<a
+								href="index.html"
+								style="
+									display: inline-block;
+									padding: 8px 12px;
+									border-radius: 6px;
+									text-decoration: none;
+									color: #fff;
+									font-weight: 700;
+									background: #00000044;
+								"
+								>Home</a
+							>
+						</td>
+						<td>
+							<a
+								href="about.html"
+								style="
+									display: inline-block;
+									padding: 8px 12px;
+									border-radius: 6px;
+									text-decoration: none;
+									color: #fff;
+									font-weight: 700;
+									background: #00000044;
+								"
+								>About Us</a
+							>
+						</td>
+						<td>
+							<a
+								href="education.html"
+								style="
+									display: inline-block;
+									padding: 8px 12px;
+									border-radius: 6px;
+									text-decoration: none;
+									color: #fff;
+									font-weight: 700;
+									background: #00000044;
+								"
+								>Education</a
+							>
+						</td>
+						<td>
+							<a
+								href="skills.html"
+								style="
+									display: inline-block;
+									padding: 8px 12px;
+									border-radius: 6px;
+									text-decoration: none;
+									color: #fff;
+									font-weight: 700;
+									background: #00000044;
+								"
+								>Skills</a
+							>
+						</td>
+						<td>
+							<a
+								href="lists.html"
+								style="
+									display: inline-block;
+									padding: 8px 12px;
+									border-radius: 6px;
+									text-decoration: none;
+									color: #fff;
+									font-weight: 700;
+									background: #00000044;
+								"
+								>Lists</a
+							>
+						</td>
+						<td>
+							<a
+								href="formats.html"
+								style="
+									display: inline-block;
+									padding: 8px 12px;
+									border-radius: 6px;
+									text-decoration: none;
+									color: #fff;
+									font-weight: 700;
+									background: #00000044;
+								"
+								>Formatting</a
+							>
+						</td>
+						<td>
+							<a
+								href="tables.html"
+								style="
+									display: inline-block;
+									padding: 8px 12px;
+									border-radius: 6px;
+									text-decoration: none;
+									color: #fff;
+									font-weight: 700;
+									background: #00000044;
+								"
+								>Tables</a
+							>
+						</td>
+						<td>
+							<a
+								href="media.html"
+								style="
+									display: inline-block;
+									padding: 8px 12px;
+									border-radius: 6px;
+									text-decoration: none;
+									color: #fff;
+									font-weight: 700;
+									background: #ffffff22;
+								"
+								>Media</a
+							>
+						</td>
+						<td>
+							<a
+								href="review.html"
+								style="
+									display: inline-block;
+									padding: 8px 12px;
+									border-radius: 6px;
+									text-decoration: none;
+									color: #fff;
+									font-weight: 700;
+									background: #00000044;
+								"
+								>Review</a
+							>
+						</td>
+						<td>
+							<a
+								href="login.html"
+								style="
+									display: inline-block;
+									padding: 8px 12px;
+									border-radius: 6px;
+									text-decoration: none;
+									color: #fff;
+									font-weight: 700;
+									background: #00000044;
+								"
+								>Login</a
+							>
+						</td>
+						<td>
+							<a
+								href="signup.html"
+								style="
+									display: inline-block;
+									padding: 8px 12px;
+									border-radius: 6px;
+									text-decoration: none;
+									color: #fff;
+									font-weight: 700;
+									background: #00000044;
+								"
+								>Sign Up</a
+							>
+						</td>
+						<td>
+							<a
+								href="contact.html"
+								style="
+									display: inline-block;
+									padding: 8px 12px;
+									border-radius: 6px;
+									text-decoration: none;
+									color: #fff;
+									font-weight: 700;
+									background: #00000044;
+								"
+								>Contact</a
+							>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="card">
+				<h2 style="margin-top: 0">Embedded Media</h2>
+				<div class="media-row">
+					<div>
+						<h3>Picture</h3>
+						<img
+							src="images/Nitish.svg"
+							alt="Profile"
+							style="max-width: 160px; border-radius: 8px"
+						/>
+						<h3 style="margin-top: 12px">Demo iframe</h3>
+						<iframe
+							src="demo_iframe.htm"
+							title="Iframe Example"
+							style="
+								width: 100%;
+								height: 200px;
+								border: 1px solid #000;
+							"
+						></iframe>
+					</div>
+					<div>
+						<h3>Video (external sample)</h3>
+						<video controls>
+							<source
+								src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+								type="video/mp4"
+							/>
+							Your browser does not support the video tag.
+						</video>
+						<h3 style="margin-top: 12px">
+							Audio (external sample)
+						</h3>
+						<audio controls style="width: 100%">
+							<source
+								src="https://www.w3schools.com/html/horse.mp3"
+								type="audio/mpeg"
+							/>
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</div>
+
+				<h3 style="margin-top: 12px">Canvas example</h3>
+				<canvas id="myCanvas" width="600" height="120"></canvas>
+
+				<h3 style="margin-top: 12px">Inline SVG</h3>
+				<svg
+					width="100"
+					height="100"
+					role="img"
+					aria-label="Sample circle"
+				>
+					<circle
+						cx="50"
+						cy="50"
+						r="40"
+						stroke="black"
+						stroke-width="2"
+						fill="lightblue"
+					/>
+				</svg>
+			</div>
+		</div>
+		<script>
+			(function () {
+				var c = document.getElementById("myCanvas");
+				if (!c) return;
+				var ctx = c.getContext("2d");
+				ctx.fillStyle = "#f2f6fb";
+				ctx.fillRect(0, 0, c.width, c.height);
+				ctx.fillStyle = "#2f80ed";
+				ctx.fillRect(20, 30, 120, 60);
+				ctx.fillStyle = "#fff";
+				ctx.font = "18px Arial";
+				ctx.fillText("Canvas demo", 32, 68);
+			})();
+		</script>
+	</body>
+</html>

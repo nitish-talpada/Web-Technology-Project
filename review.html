@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Review — Submit Feedback</title>
+<style>
+body{margin:0;font-family:Inter,Arial;background-image:linear-gradient(135deg,#1f1c2c 0%,#232526 100%),radial-gradient(circle at 10% 10%,rgba(255,107,107,0.05),transparent 10%);color:#111;min-height:100vh}
+.wrap{max-width:980px;margin:28px auto;padding:18px}
+.grid{display:grid;grid-template-columns:1fr 340px;gap:16px;margin-top:18px}
+.card{background:#fff;padding:18px;border-radius:10px;box-shadow:0 10px 30px rgba(2,6,23,0.15)}
+label{display:block;font-weight:700;margin-top:10px}
+input,textarea,select{width:100%;padding:10px;border-radius:8px;border:1px solid #ddd;margin-top:6px;box-sizing:border-box}
+input[type=range]{width:100%}
+.row{display:flex;gap:8px}
+.btn{background:#2f80ed;color:#fff;padding:10px 12px;border-radius:8px;border:none;margin-top:12px;font-weight:700;cursor:pointer}
+.muted{color:#666;font-size:0.95rem}
+@media(max-width:960px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div id="navWrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:12px"></div>
+
+  <div class="grid">
+    <main class="card" style="min-width:0">
+      <h2 style="margin-top:0">Submit a Review / Feedback</h2>
+      <p class="muted">This form shows many HTML input types. For a date range use Start date and End date.</p>
+
+      <form onsubmit="event.preventDefault();alert('Demo: review received — wire to server for production')">
+        <label for="name">Full name</label><input id="name" name="name" type="text" required placeholder="First Last">
+
+        <label for="email">Email</label><input id="email" name="email" type="email" placeholder="you@example.com">
+
+        <label for="website">Website</label><input id="website" name="website" type="url" placeholder="https://">
+
+        <label for="rating">Rating (0-10)</label>
+        <input id="rating" name="rating" type="range" min="0" max="10" step="1" value="8"><span id="rval">8</span>
+
+        <div class="row" style="margin-top:6px">
+          <div style="flex:1;min-width:0"><label for="start">Start date</label><input id="start" name="start" type="date"></div>
+          <div style="flex:1;min-width:0"><label for="end">End date</label><input id="end" name="end" type="date"></div>
+        </div>
+
+        <label for="datetime">When did this happen?</label><input id="datetime" name="datetime" type="datetime-local">
+        <label for="time">Time (optional)</label><input id="time" name="time" type="time">
+        <label for="month">Month (approx)</label><input id="month" name="month" type="month">
+        <label for="week">Week</label><input id="week" name="week" type="week">
+
+        <label for="number">Number (attendees)</label><input id="number" name="num" type="number" min="0" max="1000">
+        <label for="color">Pick a color</label><input id="color" name="color" type="color" value="#2f80ed">
+        <label for="search">Search (example)</label><input id="search" name="search" type="search" placeholder="search terms">
+        <label for="tel">Phone</label><input id="tel" name="tel" type="tel" placeholder="+91 9XXXXXXXXX">
+        <label for="file">Attach file (image / pdf)</label><input id="file" name="file" type="file" accept="image/*,application/pdf">
+
+        <label>Choose tags</label>
+        <label><input type="checkbox" name="tags" value="ui"> UI</label>
+        <label><input type="checkbox" name="tags" value="performance"> Performance</label>
+        <label><input type="checkbox" name="tags" value="ux"> UX</label>
+
+        <label>Choose type</label>
+        <label><input type="radio" name="kind" value="bug" checked> Bug</label>
+        <label><input type="radio" name="kind" value="feature"> Feature</label>
+
+        <label for="platform">Platform</label>
+        <select id="platform" name="platform"><option>Web</option><option>Mobile</option><option>Desktop</option></select>
+
+        <label for="comment">Comments</label><textarea id="comment" name="comment" rows="5" placeholder="Write your review..."></textarea>
+
+        <label for="datalist">Choose a browser</label>
+        <select id="browsers" name="datalist"><option>Chrome</option><option>Firefox</option><option>Edge</option><option>Safari</option></select>
+
+        <input type="hidden" name="source" value="portfolio">
+        <button class="btn" type="submit">Submit Review</button>
+      </form>
+    </main>
+
+    <aside class="card">
+      <h3 style="margin-top:0">Tips for a useful review</h3>
+      <p class="muted">Short, focused feedback helps us reproduce and fix issues fast. Include steps, expected vs actual behaviour, and the platform/browser used.</p>
+      <p style="margin-top:10px;font-weight:700">Before you submit</p>
+      <ol class="muted">
+        <li>Complete Name and Rating. In Comments list steps to reproduce and expected result.</li>
+        <li>Attach screenshots/logs only when helpful (recommended ≤5MB). Name files clearly (e.g. bug-login-2025-08-13.png).</li>
+        <li>For feature requests explain who benefits and why.</li>
+        <li>Don't include passwords or sensitive data. Provide email only if you want follow-up.</li>
+        <li>This demo is client-side only — add server-side validation and secure storage before production.</li>
+      </ol>
+      <p class="muted" style="margin-top:8px">After submission you will see a confirmation. For large attachments or questions: <a href="mailto:abc@gmail.com">abc@gmail.com</a>.</p>
+    </aside>
+  </div>
+</div>
+
+<script>
+// build nav table (small script to avoid repeated HTML)
+(function(){
+  const items=[['index.html','Home'],['about.html','About Us'],['education.html','Education'],['skills.html','Skills'],['lists.html','Lists'],['formats.html','Formatting'],['tables.html','Tables'],['media.html','Media'],['review.html','Review'],['login.html','Login'],['signup.html','Sign Up'],['contact.html','Contact']];
+  let t='<table role="presentation" style="border-collapse:collapse;min-width:600px"><tr>';
+  items.forEach(([h,n])=>t+='<td><a href="'+h+'" style="display:inline-block;padding:8px 12px;border-radius:6px;text-decoration:none;color:#fff;font-weight:700;background:'+(n==='Review'? '#ffffff22':'#00000044')+'">'+n+'</a></td>');
+  t+='</tr></table>';
+  document.getElementById('navWrap').innerHTML=t;
+})();
+
+// update range value display
+const r=document.getElementById('rating'), rv=document.getElementById('rval');
+if(r&&rv){r.oninput=()=>rv.textContent=r.value; r.dispatchEvent(new Event('input'));}
+</script>
+</body>
+</html>

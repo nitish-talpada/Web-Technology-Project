@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Login</title>
+<style>
+body{margin:0;font-family:Inter,Arial;background:linear-gradient(180deg,#1f1c2c,#928dab);color:#fff;min-height:100vh;display:flex;align-items:center;justify-content:center}
+.wrap{width:96%;max-width:420px;background:rgba(255,255,255,0.06);padding:22px;border-radius:12px;box-shadow:0 12px 40px rgba(2,6,23,0.6)}
+h1{margin:0 0 6px}
+label{display:block;font-weight:600;margin-top:12px}
+input{width:70%;padding:10px;margin-top:6px;border-radius:8px;border:1px solid rgba(255,255,255,0.12);background:transparent;color:#fff;max-width:100%}
+#chkbx{width:10%;padding:10px;margin-top:6px;border-radius:8px;border:1px solid rgba(255,255,255,0.12);background:transparent;color:#fff}
+.btn{display:inline-block;background:#ff8fa3;color:#111;padding:10px 12px;border-radius:8px;border:none;margin-top:14px;font-weight:700;cursor:pointer}
+.muted{color:#ddd9}
+.topnav{position:absolute;top:12px;left:12px;right:12px}
+@media(max-width:520px){input{width:100%}#chkbx{width:auto}}
+</style>
+</head>
+<body>
+<div id="navWrap" class="topnav"></div>
+
+<div class="wrap" style="margin-top:60px">
+  <h1>Sign in</h1>
+  <p class="muted">Welcome back — enter your credentials to continue.</p>
+
+  <form onsubmit="event.preventDefault();alert('Demo login — implement server to authenticate')">
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" placeholder="you@example.com" required>
+
+    <label for="pwd">Password</label>
+    <div style="position:relative;display:inline-block;width:100%">
+      <input id="pwd" name="password" type="password" placeholder="••••••••" required style="padding-right:48px">
+      <button id="showBtn" type="button" aria-label="Show password" style="position:absolute;right:6px;top:6px;padding:6px;border-radius:6px;border:none;background:#ffffff11;color:#fff;cursor:pointer">Show</button>
+    </div>
+
+    <label style="margin-top:12px"><input id="chkbx" type="checkbox" name="remember"> Remember me</label>
+
+    <button class="btn" type="submit">Sign in</button>
+  </form>
+
+  <p style="margin-top:12px" class="muted">New here? <a href="signup.html" style="color:#fff;text-decoration:underline">Create an account</a></p>
+</div>
+
+<script>
+// small nav builder to avoid repeating large markup
+(function(){
+  const items=[['index.html','Home'],['about.html','About Us'],['education.html','Education'],['skills.html','Skills'],['lists.html','Lists'],['formats.html','Formatting'],['tables.html','Tables'],['media.html','Media'],['review.html','Review'],['login.html','Login'],['signup.html','Sign Up'],['contact.html','Contact']];
+  let t='<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:12px"><table role="presentation" style="border-collapse:collapse;min-width:600px"><tr>';
+  items.forEach(([h,n])=>{
+    const bg = (n==='Login')? '#ffffff22' : '#00000044';
+    t += '<td><a href="'+h+'" style="display:inline-block;padding:8px 12px;border-radius:6px;text-decoration:none;color:#fff;font-weight:700;background:'+bg+'">'+n+'</a></td>';
+  });
+  t += '</tr></table></div>';
+  document.getElementById('navWrap').innerHTML = t;
+})();
+
+// password show toggle (minimal JS)
+document.getElementById('showBtn').addEventListener('click', function(){
+  const p = document.getElementById('pwd');
+  p.type = (p.type === 'password') ? 'text' : 'password';
+  this.textContent = p.type === 'password' ? 'Show' : 'Hide';
+});
+</script>
+</body>
+</html>
